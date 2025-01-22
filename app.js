@@ -13,7 +13,7 @@ function playAudioWithPanOscillation() {
   audio.play();
 
   let panValue = -1; // Start from left speaker
-  let direction = 1; // 1 for moving towards right, -1 for moving towards left
+  let direction = 1; // 1 for moving towards the right, -1 for moving towards the left
 
   const panInterval = setInterval(() => {
     panner.pan.value = panValue;
@@ -31,5 +31,6 @@ function playAudioWithPanOscillation() {
 }
 
 document.getElementById("audioBtn").addEventListener("click", () => {
+  console.log("Audio Played")
   playAudioWithPanOscillation(); // Start with oscillating pan
 });
